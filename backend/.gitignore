@@ -1,0 +1,22 @@
+# ignore a file type
+*.json
+*.pyc
+*.env
+*.sh
+
+# add an exception (using !) to the preceding rule to track a specific file
+!package.json
+
+*venv/
+*node_modules/
+*testing/
+*__pycache__/
+
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
