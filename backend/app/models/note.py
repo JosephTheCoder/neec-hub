@@ -12,19 +12,11 @@ class Note(ModelMixin, db.Model):
 
     author = db.Column(db.String(30), nullable=True)
 
-    # harvests = db.relationship("Harvest", backref="farm")
-    # products = db.relationship("Product", back_populates="farm")
-    # baskets = db.relationship("Basket", backref="farm")
-
-    # producer_id = db.Column(db.UUID, db.ForeignKey('producer.id'))
-    # prodcuer = db.relationship("Producer", back_populates="farms")
-
     def __init__(self, **kwargs):
         if 'text' in kwargs:
             self.text = kwargs.pop('text')
         if 'author' in kwargs:
             self.author = kwargs.pop('author')
-
 
     def __repr__(self):
         return '<Author: {}  |  Text: {}>'.format(self.author, self.text)
